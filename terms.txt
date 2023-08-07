@@ -1,0 +1,123 @@
+Branches/Forks
+Copies that will change in different ways in the future (products developed for different platforms but same origin)
+Change/Diff/Delta
+A particular modification
+Change List/Update/Patch/Commit
+An atomic set of changes
+Conflict
+Changes that can not be reconciled automatically (must be resolved)
+Head/Tip
+The most recent commit to either the trunk or a branch
+Trunk
+The original code and revisions ( before the first branch/fork)
+Defect
+Any undesirable aspect of a product
+Failure
+A deviation between a product's actual behavior and intended behavior (a feature that is missing or incorrect)
+Fault
+A defect that could (or does) give rise to failure
+Trigger Condition
+A condition that causes a fault to result in a failure
+Symptom
+A characteristic of a failure (that helps you recognize that a failure has occurred)
+"Bug"
+Not used in Verification
+Milestone
+any significant event in a project
+Deliverable
+any document, program, data, service or object produced for an internal or external customer
+Scheduling
+Deciding when a task will occur
+Resource Allocation
+Deciding which people/resources will be used for which tasks
+Plan
+Set goals, establish constraints, set requirements, determine tasks, estimate costs, formulate schedules, assign resources, manage risks
+Scope
+The work to be done in the project
+Time/Cost
+A constraint (resource to be monitored)
+Quality
+Either a part of the goal of the project or a constraint
+Resources
+Things that must be "obtained" and ready when needed in order to complete the project
+Risks
+Uncertain conditions/circumstances that have negative consequences
+Execute
+Acquire resources, train/educate, establish processes
+Control
+Collect data, analyze data, report on progress, adjust scope/schedule/budget
+Lead
+Motivate, facilitate, resolve conflicts, remove obstacles
+Plan, Execute, Control, Lead
+Management Activities
+Traditional Processes
+Management responsibilities are assigned to project managers who are given the responsibility and authority to collect data, make decisions, and control resources "UP FRONT PLAN" "PROJECT MANAGER EXECUTES" "PM MONITORS AND CHANGES 'STAKEHOLDERS'" "PM LEADER"
+Agile Processes
+Reduce the need for oversight and distribute authority and responsibility for most activities to the team, though there are exception (e.g., in Scrum leadership activities are the province of the Scrum Master) "INCREMENTAL PLAN" "TEAM" "BURN CHARTS" "VARY LEADERS"
+Windows
+A generic top-level container (ie, isn't inside another container) of GUI components
+Desk Checking
+The programmer reads through the program (and traces the execution) themselves
+Code Walkthrough
+The programmer gives their code to a review team and leads an (informal) discussion
+Code Inspection
+A review team checks the code against a prepared list of concerns
+Unit Testing
+A component is tested on its own (in isolation from any other components)
+Integration Testing
+Components are tested in combination
+System Testing
+The product is tested in its entirety, that is, all of the components that comprise the (current increment of the) product are tested in combination
+Black box
+Tester does not have access to the "internals" of components tested
+White Box
+Tester knows internal details of component being tested
+Statement Coverage
+Every Statement executed
+Branch Coverage
+Every "branch" is executed
+Condition Coverage
+Both values in every Boolean expression (with N sub-expressions in a single conditional) is covered (Worse case 2 * N conditions)
+Multiple Condition Coverage
+Make sure every (in the worse case 2^N) possible combination of every Boolean expression is covered
+Path Coverage
+Make sure every path through the code is executed
+Refactoring
+Changing code without changing its external behavior
+Production Environment
+The hardware and software system that the user interacts with through the software product
+Physical Architectures
+a realization of a software product as artifacts (eg files) residing on an executing on computational resources
+Professional
+The person interacting with the stakeholder is employed by (either directly or indirectly) the provider of the software product
+Community
+The person interacting with the stakeholder is another stakeholder (or has appropriate expertise for other reasons)
+Hybrid
+A community in which the professional participate
+Corrective
+Modifications that correct defects found in the production environment
+Adaptive
+Modifications that keep the product usable in a changed/changing production environment (eg, migration to another platform)
+Perfective
+Modifications that satisfy additional functional requirements (eg, new features) or non-functional requirements (eg improve performance)
+Preventive
+Modifications that correct faults in the development environment before they give rise to failures/symptoms in the production environment
+Project
+one-time effort to achieve a particular goal, subject to time and/or budget constraints
+Management
+the activity of assembling, directing, and/or supporting human and other resources in achieving substantial goals
+Validation
+The process of determining if a product (or its specification) satisfies stakeholders' needs and desires ("Are we building the right product?")
+Verification
+The process of determining if a product (or its specification) satisfies those needs and desires properly ("Are we building the product right?")
+Algorithmic
+A block of code does not generate the proper output for a given input
+Throughput/Performance
+A block of code does not perform at the required speed
+Recovery
+A block of code does not respond to another fault appropriately
+Alpha Testing
+Scripted - the tester follows a well-defined set of steps (so that the test is repeatable) and records the failures
+Open Ended - the tester uses the product in a "free form" fashion and records the failures
+Beta Testing
+Open Ended - the user often reports her/his experiences using a bug-tracking system
