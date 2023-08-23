@@ -13,6 +13,9 @@ main["bg"] = "#0A092B"
 qa = {}
 track_score = {}
 
+
+# Finds the text file named "terms.txt" and splits
+# into a map of questions and answers using a map
 def read_file(line_arr):
     switch = 0
     term = "empty"
@@ -26,29 +29,35 @@ def read_file(line_arr):
             switch = 0
 
 
+# GUI and logic for developing a multiple choice question
 def multiple(t1, t2, t3, t4, question, answer, ind):
     main.C = Canvas(main, width=1400, height=1000, bg="#0A092B", highlightthickness=0)
     main.C.pack()
     main.C.create_rectangle(10, 20, 1400, 850, fill='#303854', outline="#303854")
+    # Continuing on to the next question
     def cont(): 
         for child in main.winfo_children():
             child.destroy()
         create_Quest()
 
+    # Shows the window for answering the question correctly
     def correct():
         c = Label(main,text="Correct", fg="white", bg="#303854", font="Arial 20 bold")
         c.place(relx=0.5, rely=0.35, anchor=CENTER)
         track_score[question] += 1
         forward = Button(main, text="Continue?", width=400, height=100, bg="#303854", fg="white", font="Arial 17 bold", command=cont).place(relx=0.5, rely=0.85, anchor=CENTER)
 
+    # Shows the window for answering a question incorrectly
     def incorr():
         c = Label(main,text="Incorrect: " + answer, fg="white", bg="#303854", font="Arial 20 bold", wraplength=main.winfo_width() + 200)
         c.place(relx=0.5, rely=0.35, anchor=CENTER)
         track_score[question] -= 1
         forward = Button(main, text="Continue?", width=400, height=100, bg="#303854", fg="white", font="Arial 17 bold", command=cont).place(relx=0.5, rely=0.85, anchor=CENTER)
-            
+    
+    # Logic for what place in the multiple choice to place the correct answer
     l = Label(main,text=question,font="Arial 22 bold", bg="#303854", wraplength=1000)
     l.place(relx=0.5, rely=0.13, anchor=CENTER)
+    # GUI placement of correct answer
     if ind == 0:
         c1 = Button(main, text=t1, width=600, height=100, bg="#303854", fg="white", font="Arial 20 bold", command=correct).place(relx=0.3, rely=0.5, anchor=CENTER)
         c2 = Button(main, text=t2, width=600, height=100, bg="#303854", fg="white", font="Arial 20 bold", command=incorr).place(relx=0.7, rely=0.5, anchor=CENTER)
@@ -70,7 +79,7 @@ def multiple(t1, t2, t3, t4, question, answer, ind):
         c3 = Button(main, text=t3, width=600, height=100, bg="#303854", fg="white", font="Arial 20 bold", command=incorr).place(relx=0.3, rely=0.7, anchor=CENTER)
         c4 = Button(main, text=t4, width=600, height=100, bg="#303854", fg="white", font="Arial 20 bold", command=correct).place(relx=0.7, rely=0.7, anchor=CENTER)
 
-
+# GUI and logic for developing a short-answer question
 def text(question, answer):
     main.C = Canvas(main, width=1400, height=1000, bg="#0A092B", highlightthickness=0)
     main.C.pack()
@@ -81,12 +90,14 @@ def text(question, answer):
         create_Quest()
 
     s1_var = StringVar()
+    # Shows the window for answering the question correctly
     def correct():
         c = Label(main,text="Correct", fg="white", font="Arial 20 bold", bg="#303854", wraplength=main.winfo_width())
         c.place(relx=0.5, rely=0.35, anchor=CENTER)
         track_score[question] += 1
         forward = Button(main, text="Continue?", width=400, height=100, bg="#303854", fg="white", font="Arial 17 bold", command=cont).place(relx=0.5, rely=0.85, anchor=CENTER)
 
+    # Shows the window for answering the question incorrectly
     def incorr():
         c = Label(main,text="Incorrect: " + answer, fg="white", bg="#303854", font="Arial 17 bold", wraplength=main.winfo_width() + 200)
         c.place(relx=0.5, rely=0.35, anchor=CENTER)
